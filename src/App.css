@@ -1,38 +1,197 @@
+#root {
+  height: auto;
+  width: 100%;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: hsl(0, 0%, 81%);
 }
 
-.App-link {
-  color: #61dafb;
+.grid-section {
+  /* border-radius: 20px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+
+  height: auto;
+  /* width: 350px; */
+  width: 90%;
+  min-width: 350px;
+
+  /* background-color: red; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card {
+  border-radius: 10px;
+  margin-bottom: 35px;
+
+  /* background-color: green; */
+  /* display: block; */
+}
+
+.danielclifford {
+  /* margin-top: 70px; */
+  background-color: #733fc8;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 0%;
+}
+
+.jonathanwalters {
+  background-color: #49556b;
+}
+
+.jeanetteharmon {
+  background-color: #ffffff;
+}
+
+.patrickabrams {
+  background-color: #18202d;
+}
+
+.kirawhittle {
+  background-color: #ffffff;
+  margin-bottom: 70px;
+}
+
+.inner-content {
+  /* display: block; */
+  /* flex-direction: column; */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pic-name-status {
+  display: flex;
+  flex-direction: row;
+}
+.pic {
+  height: 33px;
+  vertical-align: middle;
+  /* transition: box-shadow 0.3s; */
+  border-radius: 100%;
+  /* box-shadow: 0 0 0 1px hsl(26, 55%, 52%); */
+}
+.name-status {
+  margin-left: 20px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+.name {
+  font-size: 0.8em;
+}
+.status {
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+.main-statement {
+  margin-top: 20px;
+  line-height: 130%;
+  font-size: 1.3em;
+}
+.paragraph {
+  margin-top: 20px;
+  line-height: 130%;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+/* line-height: 1; */
+
+@media screen and (min-width: 700px) {
+  .card {
+    margin: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: fit-content(8ch) fit-content(8ch) 1fr;
+  }
+
+  .danielclifford {
+    grid-area: 1 / 1 / span 1 / span 2;
+  }
+  .jonathanwalters {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  .jeanetteharmon {
+    grid-area: 2 / 2 / span 1 / span 1;
+  }
+  .patrickabrams {
+    grid-area: 3 / 1 / span 1 / span 2;
+  }
+  .kirawhittle {
+    grid-area: 4 / 1 / span 1 / span 2;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* .card {
+    margin: 15px;
+  } */
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    /* grid-template-rows: repeat(3, 25%); */
+    /* grid-template-columns: fit-content(8ch) fit-content(8ch) 1fr; */
+    grid-template-rows: fit-content(8ch) fit-content(8ch) 1fr;
+  }
+  .danielclifford {
+    grid-area: 1 / 1 / span 1 / span 2;
+  }
+
+  .jonathanwalters {
+    grid-area: 1 / 3 / span 1 / span 1;
+  }
+
+  .jeanetteharmon {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+
+  .patrickabrams {
+    grid-area: 2 / 2 / span 1 / span 2;
+  }
+
+  .kirawhittle {
+    grid-area: 3 / 1 / span 1 / span 3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    margin: 15px;
+  }
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    /* grid-template-rows: repeat(2, 50%); */
+    /* grid-template-columns: fit-content(8ch) fit-content(8ch) 1fr; */
+    grid-template-rows: fit-content(8ch) fit-content(8ch) 1fr;
+  }
+  .danielclifford {
+    grid-area: 1 / 1 / span 1 / span 2;
+  }
+
+  .jonathanwalters {
+    grid-area: 1 / 3 / span 1 / span 1;
+  }
+
+  .jeanetteharmon {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+
+  .patrickabrams {
+    grid-area: 2 / 2 / span 1 / span 2;
+  }
+
+  .kirawhittle {
+    grid-area: 1 / 4 / span 2 / span 1;
   }
 }
