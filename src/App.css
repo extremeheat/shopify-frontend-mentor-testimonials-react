@@ -108,7 +108,7 @@
 }
 /* line-height: 1; */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .card {
     margin: 15px;
   }
@@ -135,7 +135,7 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1050px) {
   /* .card {
     margin: 15px;
   } */
@@ -167,7 +167,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1270px) {
   .card {
     margin: 15px;
   }
