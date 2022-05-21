@@ -8,7 +8,7 @@ export function Card({ info }) {
     <div className={`card ${info.id}`} >
       <div className="inner-content">
         <div className="pic-name-status">
-          <img className="pic" src={info.picModified} style={{ boxShadow: info.picBackground }}></img>
+          <img className="pic" alt="PLACEHOLDER to describe this pic" src={info.picModified} style={{ boxShadow: info.picBackground }}></img>
           <div className="name-status">
             <h3 className="name {info.background}" style={{ color: info.fullNameColor }}>{info.fullName}</h3>
             <h3 className="status">{info.graduate}</h3>
